@@ -307,7 +307,7 @@ void BoxApp::BuildFX()
 	// Even if there are no compilationMsgs, check to make sure there were no other errors.
 	if(FAILED(hr))
 	{
-		DXTrace(__FILE__, (DWORD)__LINE__, hr, L"D3DX11CompileFromFile", true);
+		DXTrace(__FILEW__, (DWORD)__LINE__, hr, L"D3DX11CompileFromFile", true);
 	}
 
 	HR(D3DX11CreateEffectFromMemory(compiledShader->GetBufferPointer(), compiledShader->GetBufferSize(), 
